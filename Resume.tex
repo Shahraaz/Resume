@@ -1,0 +1,247 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume-openfont}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Mohammed Shahraaz}{Hussain}{ \urlstyle{same}
+\href{mailto:shahraazhussain@gmail.com}{shahraazhussain@gmail.com} | +91 889190909 | \href{https://www.linkedin.com/in/shahraaz/}{linkedin.com/in/shahraaz/}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{NIT Calicut}
+\descript{B.Tech Computer Science}
+\location{07/2017 - Ongoing \\ Calicut, Kerala}
+\location{ Cum. GPA: 8.4 / 10.0 }
+\sectionsep
+
+\subsection{Narayan Junior Collage}
+\descript{Higher Secondary Education Board TS}
+\location{06/2015 - 04/2017 \\ Hyderabad, Telangana}
+\location{ Score: 977 / 1000 }
+\sectionsep
+
+\subsection{Narayana High School}
+\descript{Secondary School Certificate}
+\location{06/2014 - 05/2015 \\ Hyderabad, Telangana}
+\location{ Cum. GPA: 9.5 / 10.0 }
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Codeforces:// \href{https://codeforces.com/profile/shahraaz}{\bf Shahraaz} \\
+Codechef:// \href{https://www.codechef.com/users/shahraaz}{\bf Shahraaz} \\
+Github:// \href{https://github.com/Shahraaz}{\bf Shahraaz} \\
+LeetCode:// \href{https://leetcode.com/shahraaz/}{\bf Shahraaz} \\
+LinkedIn://  \href{https://www.linkedin.com/in/shahraaz/}{\bf Shahraaz} \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+
+\subsection{Undergraduate}
+Data Structures and Algorithms \\
+Discrete Structure \\
+Operating Systems \\
+Computer Organisation \\
+Data Science \\
+Database Management Systems \\
+Unix Tools and Scripting \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+C \textbullet{} C++ \textbullet{} Java  \\ 
+Python \textbullet{} Javascript \textbullet{} HTML \textbullet{} CSS\\
+NASM \textbullet{} MySQL \\
+Cuda C++ \textbullet{} Verilog\\ 
+\location{JavaScript Libraries}
+express \textbullet{} ejs \textbullet{} passport
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     HOBBIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Hobbies}
+Competitve Programming \\ 
+Gym \\ 
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Projects
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{Twitter Mini}
+\descript{| Javascript and Mysql }
+\location{10/2019 - 11/2019 | Nit Calicut}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item A Twitter-like web app to run concurrently using cookies and sessions
+\item Backend implemented in javascript used local strategy to authenticate 
+\item Designed a relational database in MySQL to integrate features such as tweet, retweet, follow, unfollow and an option to discover new people
+\item \href{https://github.com/Shahraaz/Twitter-Mini}{Link: github.com/Shahraaz/Twitter-Mini}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Experimental Operating System}
+\descript{| xsm and expl }
+\location{7/2019 – 11/2019 | Nit Calicut}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed and Implemented a toy Operating System with basic features from scrath
+\item Wrote Code to Schedule Processes in Operating System, Allocate Resources, take Console Input and give Console Output, Disk Interrupt Handler, Exception Handler ans Forking a process
+\item OS was made to support 16 Processes and 32 Semaphores
+\item \href{https://github.com/Shahraaz/ExperimentalOS-eXpOS}{Link: github.com/Shahraaz/ExperimentalOS-eXpOS}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Outer planar Graph partition into 3 Co-Graphs}
+\descript{| C++ }
+\location{05/2019 - 07/2019 | Nit Calicut}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Improved the running time of the above algorithm under PHD Scholar
+Daphna Chacko, Nit Calicut. Wrote code to generate outer planar graphs.
+\item Improved running time from 10 minutes for a graph of size 30 to 15
+seconds.
+\item Speed up 40 times
+\item Pushed the maximum Limit of input graph to 50 nodes(40 Seconds).
+\item \href{mailto:daphna.chacko@gmail.com}{Reference: daphna.chacko@gmail.com}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Firewall Login Manager with Version Control Tools for
+Competitive Programming}
+\descript{| Bash and Python}
+\location{05/2019 - Ongoing | Nit Calicut}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Tools Designed to Automate Version Control, Login and Logout from Institute Firewall.
+\item Saves the need to enter the password for institute firewall every time.
+\item Ensures that you are not Blocked out of Firewall Accidentally.
+\item Pushed the maximum Limit of input graph to 50 nodes(40 Seconds).
+\item \href{https://github.com/Shahraaz/Script}{Link: github.com/Shahraaz/Script}
+\end{tightemize}
+\sectionsep
+
+\runsubsection{RISC Processor Design}
+\descript{|  Verilog}
+\location{07/2018 - 01/2019 | Nit Calicut}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Designed and Implemented basic 32-bit CPU from first principles in verilog
+\item Made Arithmetic and Logical Unit, also made Memory elements using
+sequential Design patterns
+\item \href{https://github.com/Shahraaz/CPUVerilog}{Link: github.com/Shahraaz/CPUVerilog}
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Achievements} 
+\begin{tabular}{rll}
+2019	     & top 40/130  & ACM ICPC Regionals Pune - Gwalior Regionals\\
+2019	     & Honourable Mention  & ACM ICPC Regionals Amritapuri Regionals\\
+\end{tabular}
+\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
