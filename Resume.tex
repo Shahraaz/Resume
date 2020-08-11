@@ -47,7 +47,30 @@
 
 \documentclass[]{deedy-resume-openfont}
 \usepackage{fancyhdr}
- 
+
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
 \pagestyle{fancy}
 \fancyhf{}
  
@@ -87,30 +110,84 @@
 \descript{B.Tech Computer Science}
 \location{07/2017 - Ongoing \\ Calicut, Kerala}
 \location{ Cum. GPA: 8.4 / 10.0 }
-\sectionsep
+% \sectionsep
 
-\subsection{Narayan Junior College}
-\descript{Higher Secondary Education Board TS}
-\location{06/2015 - 04/2017 \\ Hyderabad, Telangana}
-\location{ Score: 977 / 1000 }
-\sectionsep
+% \subsection{Narayana Institute}
+% \descript{Telangana Board}
+% \location{06/2014 - 04/2017 \\ Hyderabad, Telangana}
+% \location{XII Score:  977 / 1000 }
+% \location{X Cum. GPA: 9.5 / 10.0 }
+% \sectionsep
 
-\subsection{Narayana High School}
-\descript{Secondary School Certificate}
-\location{06/2014 - 05/2015 \\ Hyderabad, Telangana}
-\location{ Cum. GPA: 9.5 / 10.0 }
-\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Positions of Responsibility
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Positions of Responsibility} 
+
+% \subsection{NITC CODECHEF CAMPUS CHAPTER}
+% \descript{PRESIDENT}
+% % \location{12/2019 - Ongoing}
+% \location{ Conducted internal lectures for college students. Curated and tested programming problems for various programming competitions.}
+% \sectionsep
+
+% \subsection{Narayan Institute}
+% \descript{Telangana Board}
+% \location{06/2014 - 04/2017 \\ Hyderabad, Telangana}
+% \location{XII Score:  977 / 1000 }
+% \location{X Cum. GPA: 9.5 / 10.0 }
+% \sectionsep
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     LINKS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Links} 
-Codeforces:// \href{https://codeforces.com/profile/shahraaz}{\bf Shahraaz} \\
-Codechef:// \href{https://www.codechef.com/users/shahraaz}{\bf Shahraaz} \\
-Github:// \href{https://github.com/Shahraaz}{\bf Shahraaz} \\
-LeetCode:// \href{https://leetcode.com/shahraaz/}{\bf Shahraaz} \\
-LinkedIn://  \href{https://www.linkedin.com/in/shahraaz/}{\bf Shahraaz} \\
+Atcoder:// \href{https://atcoder.jp/users/shahraaz}{ Shahraaz} \\ 
+Codechef:// \href{https://www.codechef.com/users/shahraaz}{ Shahraaz} \\ 
+Codeforces:// \href{https://codeforces.com/profile/shahraaz}{ Shahraaz} \\ 
+Github:// \href{https://github.com/Shahraaz}{ Shahraaz} \\
+ICPCID://  \href{https://icpc.global/ICPCID/H0AP81X7UN6E}{ H0AP81X7UN6E} \\
+LeetCode:// \href{https://leetcode.com/shahraaz/}{ Shahraaz} \\ 
+Stopstalk:// \href{https://www.stopstalk.com/user/profile/Shahraaz}{ Shahraaz} \\ 
+Topcoder:// \href{https://www.topcoder.com/members/shahraazhussain}{ Shahraazhussain} \\ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Programming Skills}
+% \subsection{}
+C \textbullet{} C++ \textbullet{} Java \textbullet{}  Python \\ 
+Javascript \textbullet{} HTML \textbullet{} CSS\\
+NASM \textbullet{} MySQL \textbullet{} Cuda C++ \\\
+Docker \textbullet{} Kubernetes \textbullet{} Knative\\ 
+\sectionsep
+
+
+\section{Achievements} 
+{\bf ICPC 2020 , pune-onsite } Rank {\bf 39/130}  \\
+{\bf Atcoder} Rank {\bf 193 }(India)  / 9801 \\
+{\bf Codechef} Rank {\bf 1001 }(India)/ 2.5 Lakh\\
+{\bf Codeforces} Rank {\bf 1915 }(India)/ 13436\\
+{\bf Leetcode} Rank {\bf 2259 } (Global) / 116630\\
+{\bf Topcoder} Rank {\bf 805 }(Global)\\
+{\bf Solved  1445  Problems } from Various sites
+in C++ (Stopstalk)\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     HOBBIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Co-Curricular}
+{\bf Conducted Hack-a-Holic (CTF style contest) for TechFest Tathva 2020 (LAMP Stack) } \\ 
+Competitive Programming\\ 
+Football\\ 
+Gym\\ 
+% \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     COURSEWORK
@@ -118,38 +195,18 @@ LinkedIn://  \href{https://www.linkedin.com/in/shahraaz/}{\bf Shahraaz} \\
 
 \section{Coursework}
 
-\subsection{Undergraduate}
-Data Structures and Algorithms \\
-Discrete Structure \\
-Operating Systems \\
-Computer Organisation \\
+% \subsection{Undergraduate}
+% Discrete Structure \\
+Compiler Design \\
+Computer Networks\\ 
 Data Science \\
+Data Structures and Algorithms \\
 Database Management Systems \\
+Mathematics for Machine Learning \\
+Operating Systems \\
+% Theory of Computation \\
+% Computer Organisation \\
 Unix Tools and Scripting \\
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-\subsection{Programming}
-C \textbullet{} C++ \textbullet{} Java  \\ 
-Python \textbullet{} Javascript \textbullet{} HTML \textbullet{} CSS\\
-NASM \textbullet{} MySQL \\
-Cuda C++ \textbullet{} Verilog\\ 
-\location{JavaScript Libraries}
-express \textbullet{} ejs \textbullet{} passport
-\sectionsep
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     HOBBIES
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Hobbies}
-Competitve Programming \\ 
-Gym \\ 
-\sectionsep
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -166,83 +223,111 @@ Gym \\
 %     Projects
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Projects}
-\runsubsection{Twitter Mini}
-\descript{| Javascript and Mysql }
-\location{10/2019 - 11/2019 | Nit Calicut}
+
+\section{Work Experience}
+\runsubsection{CodeNation}
+\descript{| Software Development Engineer Intern}
+\location{05/2020 - 7/2020 | WFH}
 \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item A Twitter-like web app to run concurrently using cookies and sessions
-\item Backend implemented in javascript used local strategy to authenticate 
-\item Designed a relational database in MySQL to integrate features such as tweet, retweet, follow, unfollow and an option to discover new people
-\item \href{https://github.com/Shahraaz/Twitter-Mini}{Link: github.com/Shahraaz/Twitter-Mini}
+\item Collaborated in a team of 3 on Product Devflows which aims to make project development reusable and convenient
+\item Designed and Implemented a system to create Documentation of Invocable (user-made APIs) and keep them up to date by observing traffic {\bf automatically } 
+\item Utilized Knative to shutdown service gracefully and back up to AWS S3
+\item Imported features from rival products Nodered and Camel  
+\item Exposure: Django, Nodejs, Maven, AWS, Docker, K8s, KNative etc.
 \end{tightemize}
 \sectionsep
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+\section{POSITIONS OF RESPONSIBILITY}
+\runsubsection{NITC CODECHEF CAMPUS CHAPTER}
+\descript{| PRESIDENT}
+\location{09/2019 - Present | Nit Calicut}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+% \item Founded the Club under the guidance of Codechef
+\item Organised workshops on topics related to Data Structures and Algorithms 
+\item Curated and tested programming problems for five programming competitions 
+\item Conducted ICPC sessions to guide coding enthusiasts
+\end{tightemize}
+\sectionsep
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+
+
+\section{Projects}
+
+\runsubsection{Ghositii Chan}
+\descript{| Python, Splinter ,Discord.py, GIT API}
+\location{05/2020 - Ongoing | Discord}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Built a Multipurpose utility discord bot to solve one of the biggest problems on a diverse/multilingual chat platform aka language barrier
+\item The bot has a built from scratch API to fetch translate results as well as several texts sniping features with store up to 10 deleted and edited texts per channel
+\item The bot is operated in 711 servers with a total of 1,26,325 users in guilds
+as of 01/08/2020
+% \item Pushed the maximum Limit of input graph to 50 nodes(40 Seconds).
+% \item \href{https://github.com/Shahraaz/Script}{Link: github.com/Shahraaz/Script}
+\end{tightemize}
+\sectionsep
+
 
 \runsubsection{Experimental Operating System}
 \descript{| xsm and expl }
 \location{7/2019 – 11/2019 | Nit Calicut}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item Designed and Implemented a toy Operating System with basic features from scrath
-\item Wrote Code to Schedule Processes in Operating System, Allocate Resources, take Console Input and give Console Output, Disk Interrupt Handler, Exception Handler ans Forking a process
-\item OS was made to support 16 Processes and 32 Semaphores
-\item \href{https://github.com/Shahraaz/ExperimentalOS-eXpOS}{Link: github.com/Shahraaz/ExperimentalOS-eXpOS}
+\item Developed a toy OS with basic features from scratch (2000 Lines of Code)
+\item Functionality Schedule Processes in OS, Allocate Resources, take Console Input and give Console Output, Disk Interrupt Handler, Exception Handler, Forking a process, support 16 Processes and 32 Semaphores etc
+% \item OS 
+\item \href{https://github.com/Shahraaz/ExperimentalOS-eXpOS}{Link: github.com/Shahraaz/ExperimentalOS-eXpOS }
 \end{tightemize}
 \sectionsep
 
 \runsubsection{Outer planar Graph partition into 3 Co-Graphs}
 \descript{| C++ }
 \location{05/2019 - 07/2019 | Nit Calicut}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item Improved the running time of the above algorithm under PHD Scholar
-Daphna Chacko, Nit Calicut. Wrote code to generate outer planar graphs.
+\item Improved run time of above algorithm under PhD Scholar
+Daphna Chacko, Nit Calicut. Wrote code to generate outerplanar graphs
 \item Improved running time from 10 minutes for a graph of size 30 to 15
-seconds.
-\item Speed up 40 times
-\item Pushed the maximum Limit of input graph to 50 nodes(40 Seconds).
+seconds
+% \item Speed up 40 times
+\item Pushed maximum Limit of input graph to 50 nodes(40 Seconds)
 \item \href{mailto:daphna.chacko@gmail.com}{Reference: daphna.chacko@gmail.com}
 \end{tightemize}
 \sectionsep
 
-\runsubsection{Firewall Login Manager with Version Control Tools for
-Competitive Programming}
-\descript{| Bash and Python}
-\location{05/2019 - Ongoing | Nit Calicut}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
-\begin{tightemize}
-\item Tools Designed to Automate Version Control, Login and Logout from Institute Firewall.
-\item Saves the need to enter the password for institute firewall every time.
-\item Ensures that you are not Blocked out of Firewall Accidentally.
-\item Pushed the maximum Limit of input graph to 50 nodes(40 Seconds).
-\item \href{https://github.com/Shahraaz/Script}{Link: github.com/Shahraaz/Script}
-\end{tightemize}
-\sectionsep
+% {\bf  More Projects: Twitter-Mini (MEN Stack), NITC Firewall Login Manager, Risc Processor From Scratch etc. }
 
-\runsubsection{RISC Processor Design}
-\descript{|  Verilog}
-\location{07/2018 - 01/2019 | Nit Calicut}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\runsubsection{Twitter Mini}
+\descript{| Javascript and Mysql }
+\location{10/2019 - 11/2019 | Nit Calicut}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
 \begin{tightemize}
-\item Designed and Implemented basic 32-bit CPU from first principles in verilog
-\item Made Arithmetic and Logical Unit, also made Memory elements using
-sequential Design patterns
-\item \href{https://github.com/Shahraaz/CPUVerilog}{Link: github.com/Shahraaz/CPUVerilog}
+\item A Twitter-like web app to run concurrently using cookies and sessions
+\item Created Backend in javascript used local strategy to authenticate 
+\item Designed a relational database in MySQL to integrate features such as a tweet, retweet, follow, unfollow and an option to discover new people
+\item \href{https://github.com/Shahraaz/Twitter-Mini}{Link: github.com/Shahraaz/Twitter-Mini}
 \end{tightemize}
-\sectionsep
+% \sectionsep
+
+% \runsubsection{RISC Processor Design}
+% \descript{|  Verilog}
+% \location{07/2018 - 01/2019 | Nit Calicut}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \begin{tightemize}
+% \item Designed and Implemented basic 32-bit CPU from first principles in verilog
+% \item Made Arithmetic and Logical Unit, also made Memory elements using
+% sequential Design patterns
+% \item \href{https://github.com/Shahraaz/CPUVerilog}{Link: github.com/Shahraaz/CPUVerilog}
+% \end{tightemize}
+% \sectionsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %     AWARDS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Achievements and Activities} 
-\begin{tabular}{rll}
-2019	     & top 40/130  & ACM ICPC Regionals Pune - Gwalior Regionals\\
-2019	     & Honourable Mention  & ACM ICPC Regionals Amritapuri Regionals\\
-2019	     & Founder and Head  & Porgramming Club NITC (Codechef Campus Chapter)\\
-\end{tabular}
-\sectionsep
 
 \end{minipage} 
 \end{document}  \documentclass[]{article}
